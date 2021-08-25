@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body { 
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: calc(100% - 240px);
+    margin: 0 auto;
+
+    @media screen and (min-width: 1500px) {
+        max-width: 1340px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    @include respond-to(desktop) {
+        max-width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(tablet-landscape) {
+        max-width: calc(100% - 75px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(tablet-portrait) {
+        max-width: calc(100% - 50px);
+        margin: 0 auto;
+    }
+
+    @include respond-to(phone-only) {
+        max-width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.title {
+    font-family: $font-normal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    color: $color-shaft;
+
+    &_big {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    &_new-line {
+        display: block;
+    }
+}
+
+.text {
+    font-family: $font-normal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-shaft;
+}
+
+.logo {
+    max-width: 37px;
+
+    &-wrapper {
+        padding-right: 19px;
+    }
+
+    &__master-card {
+
+        &-wrapper {
+            padding-right: 30px;
+        }
+    }
+}
+
+.nav {
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @include respond-to(phone-only) {
+        align-items: center;
+    }
+    
+    &__list {
+        margin: 0 -15px;
+
+        @include respond-to(phone-only) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+
+        @include respond-to(phone-only) {
+            padding: 5px 0;
+        }
+    }
+
+    &__link {
+        font-family: $font-normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-shaft;
+        padding: 0 15px;
+        transition: all .5s;
+
+        &:hover {
+            color: $color-silver;
+        }
+    }
+}
+
+.image {
+    max-width: 585px;
+}

@@ -1,0 +1,88 @@
+.banner {
+    padding: 40px 0 90px;
+
+    &__wrapper {
+
+        @include respond-to(tablet-landscape) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        padding-top: 160px;
+
+        @include respond-to(desktop) {
+            padding-top: 50px;
+        }
+
+        @include respond-to(tablet-portrait) {
+            padding-top: 0;
+        }
+    }
+
+    &__btn {
+        padding-left: 41px;
+        font-family: $font-normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        color: $color-black;
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 33px;
+        transition: all .5s;
+        
+        &:hover {
+            color: $color-silver;
+        }
+
+        &::before {
+            content: url(../assets/images/play.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 4px;
+        }
+    }
+
+    &__title {
+        max-width: 369px;
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        max-width: 400px;
+        margin-bottom: 12.5px;
+    }
+
+    &__links {
+        margin-bottom: -21px;
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 21px;
+
+        &-img {
+            max-width: 170px;
+        }
+    }
+
+    &__img {
+
+        @media screen  and (max-width: 1000px) {
+           max-width: 400px;
+        }
+
+        &-wrapper {
+
+            @include respond-to(phone-only) {
+                padding-top: 30px;
+            }
+        }
+    }
+}

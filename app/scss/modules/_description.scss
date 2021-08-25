@@ -1,0 +1,74 @@
+.description {
+    padding-bottom: 200px;
+
+    @include respond-to(desktop) {
+        padding-bottom: 120px;
+    }
+
+    @include respond-to(tablet-landscape) {
+        padding-bottom: 100px;
+    }
+
+    @include respond-to(tablet-portrait) {
+        padding-bottom: 70px;
+    }
+
+    @include respond-to(phone-only) {
+        padding-bottom: 30px;
+    }
+
+    &__wrapper {
+
+        @include respond-to(tablet-portrait) {
+            flex-direction: column;
+        }
+        
+        &_order {
+
+            @include respond-to(tablet-portrait) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__content {
+        padding: 314px 0 232px;
+        max-width: 480px;
+
+        @include respond-to(desktop) {
+            padding: 80px 0 0 25px;
+        }
+
+        @include respond-to(tablet-landscape) {
+            max-width: 300px;
+            padding: 0;
+        }
+
+        &_care {
+            padding: 195px 0 0;
+            max-width: 447px;
+
+            @include respond-to(desktop) {
+                padding-top: 80px;
+            }
+
+            @include respond-to(tablet-landscape) {
+                max-width: 300px;
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 21px;
+    }
+
+    &__text {
+        margin-bottom: 12px;
+
+        &_black {
+            color: $color-black;
+            padding-top: 5px;
+        }
+    }
+}

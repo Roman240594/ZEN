@@ -1,0 +1,24 @@
+.button {
+    font-family: $font-normal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-shaft;
+    padding: 12px 32px 11px;
+    border: 1px solid $color-black;
+    background-color: inherit;
+    border-radius: 48px;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        background-color: $color-grey;
+        border: 1px solid $color-silver;
+        color: $color-silver;
+    }
+
+    @include respond-to(phone-only) {
+        max-height: 55px;
+    }
+}
